@@ -1,0 +1,56 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	// program ini berfungsi untuk menghitung jumlah kue yang dapat dibuat dengan jumlah bahan tertentu sekaligus menghitung jumlah bahan yang tersisa
+	int terigu, gula, telur, susu, bp, vanilla, hasiltrg, hasilgl, hasiltlr, hasilss, hasilbp, hasilvnl, sisatrg, sisagl, sisatlr, sisass, sisabp, sisavnl;
+	cout << "\t Resep Kue Ibu \n";
+	cout << "Terigu 500 gr \n";
+	cout << "Gula 50 gr \n";
+	cout << "Telur 2 butir \n";
+	cout << "Susu 50 ml \n";
+	cout << "Baking Powder 1 sdt \n";
+	cout << "Ekstrak vanilla 1 sdt \n\n";
+	
+	cout << "Bahan-bahan yang dibeli: \n";
+	cout << "Terigu(gr) : "; cin >> terigu;
+	cout << "Gula(gr) : "; cin >> gula;
+	cout << "Telur(butir) : "; cin >> telur;
+	cout << "Susu(ml) : "; cin >> susu;
+	cout << "Baking powder(sdt) : "; cin >> bp;
+	cout << "Ekstrak Vanilla(sdt) : "; cin >> vanilla;
+	
+	hasiltrg = terigu/500; hasilgl = gula/50; hasiltlr = telur/2; hasilss = susu/50; hasilbp = bp/1; hasilvnl = vanilla/1;
+	
+	int hasil;
+	
+	hasil = hasiltrg;
+	if (hasil >= hasilgl) {
+		hasil = hasilgl;
+		if (hasil >= hasiltlr) {
+		hasil = hasiltlr;
+			if (hasil >= hasilss) {
+			hasil = hasilss;
+				if (hasil >= hasilbp) {
+				hasil = hasilbp;
+					if (hasil >= hasilvnl) {
+					hasil = hasilvnl;
+					}
+				}
+			}
+		}
+	}
+	
+	sisatrg = terigu-hasil*500; sisagl = gula-hasil*50; sisatlr = telur-hasil*2; sisass = susu-hasil*50; sisabp = bp-hasil*1; sisavnl = vanilla-hasil*1;
+	
+	cout << "\n" << "Maka, jumlah kue yang dapat dibuat dengan jumlah bahan tersebut adalah " << hasil << " buah\n\n";
+	cout << "Jumlah sisa bahan : \n";
+	cout << "Sisa terigu = " << sisatrg << " gr\n";
+	cout << "Sisa gula = " << sisagl << " gr\n";
+	cout << "Sisa telur = " << sisatlr << " butir\n";
+	cout << "Sisa susu = " << sisass << " ml\n";
+	cout << "Sisa baking powder = " << sisabp << " sdt\n";
+	cout << "Sisa ekstrak vanilla = " << sisavnl << " sdt\n";
+	
+	return 0;
+}
